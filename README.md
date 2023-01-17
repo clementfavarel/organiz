@@ -16,7 +16,7 @@ Je l'ai créé dans le cadre d'une utilisation personnelle
 - matrice d'Eisenhower
 - prise de notes
 - citations
-- 
+
 **Étape 5 : Revoir le design**
 
 **Étape 6 : Maintenir et corriger les éventuels bugs**
