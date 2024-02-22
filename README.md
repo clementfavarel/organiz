@@ -3,20 +3,39 @@
 Organiz est une application d'organisation, gestion de tâches et idéateur qui peut s'apparenter à un outil comme Notion.
 Je l'ai créé dans le cadre d'une utilisation personnelle
 
-### Processus de développement :
+## L'application Organiz est composée de plusieurs fonctionnalités :
 
-**Étape 1 : La base de données**
+-   to-do list
+-   matrice d'Eisenhower
+-   prise de notes
+-   citations
 
-**Étape 2 : L'authentification**
+## Développement
 
-**Étape 3 : La page d'accueil**
+Version: 1.0.0
 
-**Étape 4 : Les différents fonctionnalités**
-- to-do list
-- matrice d'Eisenhower
-- prise de notes
-- citations
+### Technologies utilisées
 
-**Étape 5 : Revoir le design**
+-   Docker + Docker Compose
+-   PHP
+-   Apache
+-   MariaDB
+-   HTML
+-   CSS
+-   JavaScript
 
-**Étape 6 : Maintenir et corriger les éventuels bugs**
+**Dépendances:**
+
+-   [Docker](https://www.docker.com/)
+-   [Docker Compose](https://docs.docker.com/compose/)
+
+## Installation
+
+```bash
+git clone git@github.com:clementfavarel/organiz.git
+cd organiz
+docker-compose up -d --build
+```
+
+Dirigez-vous ensuite vers l'url: [http://localhost](http://localhost)
+Pour adminer: [http://localhost:8080](http://localhost:8080)
