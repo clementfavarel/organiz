@@ -37,5 +37,7 @@ cd organiz
 docker-compose up -d --build
 ```
 
-Dirigez-vous ensuite vers l'url: [http://localhost](http://localhost)
-Pour adminer: [http://localhost:8080](http://localhost:8080)
+Dirigez-vous ensuite vers l'url:
+
+-   Pour l'application: [http://localhost](http://localhost)
+-   Pour adminer: [http://localhost:8080](http://localhost:8080)
