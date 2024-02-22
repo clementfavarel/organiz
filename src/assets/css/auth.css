@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    place-items: center;
+}
+.card {
+    width: 90%;
+    max-width: 380px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.input-group {
+    margin-bottom: 1rem;
+}
+.auth-btn {
+    margin: 1.5rem auto 0 auto;
+}
+.small {
+    text-align: center;
+    margin-top: 1rem;
+}
