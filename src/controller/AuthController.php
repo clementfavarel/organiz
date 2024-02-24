@@ -23,7 +23,7 @@ class AuthController
             $errorLink = "index.php?page=register";
             include('view/error.php');
         } else {
-            if (password_verify($pwd, $user['password'])) {
+            if (password_verify($pwd, $user['pwd'])) {
                 $_SESSION['user'] = $user;
                 header('Location: index.php?page=dashboard');
             } else {
@@ -37,6 +37,31 @@ class AuthController
 
     public function register()
     {
+        $pseudo = $_POST['pseudo'];
+        $email = $_POST['email'];
+        $pwd = $_POST['pwd'];
+        $pwdConfirm = $_POST['pwd_confirm'];
+
+        if ($pwd === $pwdConfirm) {
+            $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+            $created = date('Y-m-d H:i:s');
+            $user = $this->userModel->create($pseudo, $email, $hashedPwd, $created);
+
+            if ($user) {
+                $_SESSION['user'] = $user['id'];
+                header('Location: index.php?page=dashboard');
+            } else {
+                $errorCode = '500';
+                $errorMessage = "Une erreur est survenue lors de l'inscription.";
+                $errorLink = "index.php?page=register";
+                include('view/error.php');
+            }
+        } else {
+            $errorCode = '403';
+            $errorMessage = "Les mots de passe ne correspondent pas.";
+            $errorLink = "index.php?page=register";
+            include('view/error.php');
+        }
     }
 
     public function logout()
